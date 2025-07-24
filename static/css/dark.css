@@ -1,0 +1,48 @@
+/* Importe o CSS do Bootstrap primeiro no seu HTML ou aqui se estiver usando um pré-processador */
+
+:root {
+    /* Variáveis CSS para a paleta de cores */
+    --bs-body-bg: #1a1a1d; /* Fundo principal do body */
+    --bs-body-color: #f8f9fa; /* Cor do texto principal */
+    --bs-secondary-color: #adb5bd; /* Cor do texto secundário/detalhes */
+    --bs-dark: #343a40; /* Cor para elementos de destaque/primários (ex: cards) */
+    --bs-blue: #007bff; /* Cor de acento/ação (ex: botões) */
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Opcional: Estilos para links básicos */
+a {
+    color: var(--bs-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--bs-blue); /* Ou um tom um pouco mais escuro/claro se quiser */
+    text-decoration: underline;
+}
+
+/* Opcional: Para elementos com cor secundária (ex: texto menor, legendas) */
+.text-secondary {
+    color: var(--bs-secondary-color) !important;
+}
+
+/* Opcional: Para cards ou seções com fundo mais escuro, mas não preto total */
+.bg-dark {
+    background-color: var(--bs-dark) !important;
+}
+
+/* Você pode adicionar mais classes Bootstrap-like conforme precisar */
+.btn-primary {
+    background-color: var(--bs-blue);
+    border-color: var(--bs-blue);
+    color: var(--bs-body-color); /* Para texto do botão ser claro */
+}
+
+.btn-primary:hover {
+    background-color: #0069d9; /* Um azul ligeiramente mais escuro no hover */
+    border-color: #0062cc;
+}

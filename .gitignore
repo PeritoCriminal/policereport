@@ -1,0 +1,56 @@
+# Arquivos e pastas do Python e Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+venv/
+.venv/
+/htmlcov/
+.tox/
+.coverage
+.coverage.*
+.benchmarks/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+pip-log.txt
+pip-delete-this-arg.txt
+.history/ # Se você usa alguma extensão de histórico no VS Code, por exemplo
+
+# Pastas de dados específicas do Django
+*.sqlite3
+/db.sqlite3
+/media/
+
+# Pastas e arquivos específicos do usuário/ambiente local
+/policereport/local_settings.py
+
+# Arquivos de configurações de IDEs
+.idea/             # JetBrains IDEs (PyCharm, IntelliJ)
+.vscode/           # Visual Studio Code (pode conter configurações de launch, tasks, etc.)
+*.sublime-project  # Sublime Text
+*.sublime-workspace
+.project           # Eclipse
+.pydevproject
+
+# Logs
+*.log
+log/
+logs/
+
+# Arquivos de sistema e temporários
+.DS_Store          # macOS
+Thumbs.db          # Windows
+ehthumbs.db
+*.bak
+*.swp
+*~
+.nfs*
+
+# Pastas para arquivos estáticos coletados (produção)
+# Esta pasta é gerada pelo 'python manage.py collectstatic'
+# e deve ser gerenciada pelo servidor web, não pelo Git.
+/staticfiles/

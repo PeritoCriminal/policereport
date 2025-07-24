@@ -1,0 +1,172 @@
+policereport/
+├── .gitignore
+├── citizenreport
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── citizenreport
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── core
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── core
+│   │       ├── base.html
+│   │       └── home.html
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── defenders
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── defenders
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── forensicreport
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── forensicreport
+│   │       └── report.html
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── incidentreport
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── incidentreport
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── inquiry
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── inquiry
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── manage.py
+├── network
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── network
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── organizations
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── organizations
+│   ├── tests.py
+│   ├── tree.txt
+│   └── views
+│       └── __init__.py
+├── policereport
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── local_settings.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── prosecutors
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms
+│   │   └── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models
+│   │   └── __init__.py
+│   ├── templates
+│   │   └── prosecutors
+│   ├── tests.py
+│   └── views
+│       └── __init__.py
+├── requirements.txt
+├── static
+│   ├── css
+│   │   └── dark.css
+│   ├── imgs
+│   └── scripts
+├── tree.txt
+├── tree_generator.py
+└── users
+    ├── __init__.py
+    ├── admin.py
+    ├── apps.py
+    ├── forms
+    │   └── __init__.py
+    ├── migrations
+    │   └── __init__.py
+    ├── models
+    │   └── __init__.py
+    ├── templates
+    │   └── users
+    ├── tests.py
+    └── views
+        └── __init__.py
