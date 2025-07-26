@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      {% block title %}
+        MyReport
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+    {% if theme == 'dark' %}
+      <link rel="stylesheet" href="{% static 'css/dark.css' %}" />
+    {% endif %}
+  </head>
+  <body>
+    <header>
+      <h1 class="display-4 secundary">
+        {% block header %}
+          Projeto PoliceReport {{ provisional_user.user_name }}
+        {% endblock %}
+      </h1>
+    </header>
+
+    <main>
+      {% block content %}
+
+      {% endblock %}
+    </main>
+
+    <footer>
+      {% block footer %}
+        MyReport - todos os direitos reservados
+      {% endblock %}
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
