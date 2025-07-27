@@ -7,10 +7,10 @@ organizations/
 │   └── oraganizational_unit.py
 ├── migrations
 │   ├── 0001_initial.py
-│   ├── 0002_organizationalunit_is_active.py
 │   └── __init__.py
 ├── models
 │   ├── __init__.py
+│   ├── institution.py
 │   └── organizational_unit.py
 ├── templates
 │   └── organizations
