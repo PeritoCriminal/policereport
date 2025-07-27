@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+    {% if form.instance.pk %}Links{% else %}Acesso às páginas{% endif %}
+{% endblock %}
+
+{% block content %}
+    <h2 class='display-4'>Links</h2>
+    <p><a href="{% url 'institution_create' %}">Nova Instituição.</a></p>
+    <p><a href="{% url 'institution_list' %}">Lista de Instituições.</a></p>
+{% endblock %}

@@ -16,7 +16,6 @@ class OrganizationalUnitForm(forms.ModelForm):
             'institution': forms.Select(attrs={'class': 'form-select'}), # Adicionado para a Instituição
             'parent': forms.Select(attrs={'class': 'form-select'}),
             'abbreviation': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Abreviação'}),
-            'state': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Estado (Ex: SP)'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 4, 'placeholder': 'Descrição detalhada da unidade'}),
             'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
         }
@@ -26,7 +25,6 @@ class OrganizationalUnitForm(forms.ModelForm):
             'institution': 'Instituição Vinculada', # Adicionado para a Instituição
             'parent': 'Unidade Superior Hierárquica',
             'abbreviation': 'Abreviação',
-            'state': 'Estado',
             'description': 'Descrição Detalhada',
             'is_active': 'Unidade Ativa',
         }

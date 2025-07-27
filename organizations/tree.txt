@@ -4,9 +4,12 @@ organizations/
 ├── apps.py
 ├── forms
 │   ├── __init__.py
+│   ├── institution.py
 │   └── oraganizational_unit.py
 ├── migrations
 │   ├── 0001_initial.py
+│   ├── 0002_remove_organizationalunit_state_and_more.py
+│   ├── 0003_remove_organizationalunit_unit_type.py
 │   └── __init__.py
 ├── models
 │   ├── __init__.py
@@ -14,9 +17,16 @@ organizations/
 │   └── organizational_unit.py
 ├── templates
 │   └── organizations
+│       ├── institution_confirm_delete.html
+│       ├── institution_form.html
+│       ├── institution_list.html
+│       ├── organizational_unit_confirm_delete.html
+│       ├── organizational_unit_form.html
+│       └── organizational_unit_list.html
 ├── tests.py
 ├── tree.txt
 ├── urls.py
 └── views
     ├── __init__.py
-    └── oraganizational_unit.py
+    ├── institution_views.py
+    └── oraganizational_unit_views.py

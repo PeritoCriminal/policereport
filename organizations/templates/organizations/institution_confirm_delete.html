@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Confirmar Exclusão de Instituição{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card border-danger shadow-sm rounded-3">
+                    <div class="card-header bg-danger text-white rounded-top-3">
+                        <h4 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Confirmar Exclusão</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead text-center">Tem certeza de que deseja excluir a instituição:</p>
+                        <h3 class="text-center text-danger mb-4">"{{ institution.name }}"?</h3>
+                        <p class="text-center text-muted">Esta ação é irreversível e removerá todos os dados associados a esta instituição.</p>
+
+                        <form method="post" class="text-center mt-4">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger rounded-pill px-4 me-2">
+                                <i class="fas fa-trash-alt me-2"></i>Confirmar Exclusão
+                            </button>
+                            <a href="{% url 'institution_list' %}" class="btn btn-secondary rounded-pill px-4">
+                                <i class="fas fa-times-circle me-2"></i>Cancelar
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
