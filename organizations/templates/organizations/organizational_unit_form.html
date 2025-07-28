@@ -1,0 +1,94 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+  {% if form.instance.pk %}Editar Unidade Organizacional{% else %}Cadastrar Unidade Organizacional{% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <div class="card shadow-lg rounded-4 border-0 overflow-hidden">
+          <div class="card-header bg-primary text-white text-center py-3 rounded-top-4">
+            <h4 class="mb-0 fs-4">
+              {% if form.instance.pk %}
+                <i class="fas fa-sitemap me-2"></i> Editar Unidade Organizacional
+              {% else %}
+                <i class="fas fa-plus-circle me-2"></i> Nova Unidade Organizacional
+              {% endif %}
+            </h4>
+          </div>
+          <div class="card-body p-4">
+            <form method="post" class="needs-validation" novalidate>
+              {% csrf_token %}
+
+              <div class="row g-3 mb-3">
+                <div class="col-12">
+                  <label for="{{ form.name.id_for_label }}" class="form-label fw-semibold">{{ form.name.label }}</label>
+                  {{ form.name|add_class:"form-control" }}
+                  {% if form.name.help_text %}<div class="form-text">{{ form.name.help_text }}</div>{% endif %}
+                  {% for error in form.name.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+                </div>
+
+                <div class="col-md-6">
+                  <label for="{{ form.abbreviation.id_for_label }}" class="form-label fw-semibold">{{ form.abbreviation.label }}</label>
+                  {{ form.abbreviation|add_class:"form-control" }}
+                  {% if form.abbreviation.help_text %}<div class="form-text">{{ form.abbreviation.help_text }}</div>{% endif %}
+                  {% for error in form.abbreviation.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+                </div>
+
+                <div class="col-md-6">
+                  <label for="{{ form.unit_type.id_for_label }}" class="form-label fw-semibold">{{ form.unit_type.label }}</label>
+                  {{ form.unit_type|add_class:"form-select w-100" }}
+                  {% if form.unit_type.help_text %}<div class="form-text">{{ form.unit_type.help_text }}</div>{% endif %}
+                  {% for error in form.unit_type.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+                </div>
+
+                <div class="col-12">
+                  <label for="{{ form.institution.id_for_label }}" class="form-label fw-semibold">{{ form.institution.label }}</label>
+                  {{ form.institution|add_class:"form-select w-100" }}
+                  {% if form.institution.help_text %}<div class="form-text">{{ form.institution.help_text }}</div>{% endif %}
+                  {% for error in form.institution.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+                </div>
+
+                <div class="col-12">
+                  <label for="{{ form.parent.id_for_label }}" class="form-label fw-semibold">{{ form.parent.label }}</label>
+                  {{ form.parent|add_class:"form-select w-100" }}
+                  {% if form.parent.help_text %}<div class="form-text">{{ form.parent.help_text }}</div>{% endif %}
+                  {% for error in form.parent.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="{{ form.description.id_for_label }}" class="form-label fw-semibold">{{ form.description.label }}</label>
+                {{ form.description|add_class:"form-control" }}
+                {% if form.description.help_text %}<div class="form-text">{{ form.description.help_text }}</div>{% endif %}
+                {% for error in form.description.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+              </div>
+
+              <div class="form-check mb-4">
+                {{ form.is_active|add_class:"form-check-input" }}
+                <label class="form-check-label fw-semibold" for="{{ form.is_active.id_for_label }}">
+                  {{ form.is_active.label }}
+                </label>
+                {% if form.is_active.help_text %}<div class="form-text">{{ form.is_active.help_text }}</div>{% endif %}
+                {% for error in form.is_active.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
+                  <i class="fas fa-save me-2"></i>Salvar
+                </button>
+                <a href="{% url 'organizational_unit_list' %}" class="btn btn-outline-secondary btn-lg rounded-pill px-5">
+                  <i class="fas fa-times me-2"></i>Cancelar
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
