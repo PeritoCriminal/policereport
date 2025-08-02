@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}E-mail Enviado | Policereport{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm rounded-4 border-0">
+        <div class="card-header bg-info text-white text-center rounded-top-4">
+          <h4 class="mb-0">Verifique sua Caixa de Entrada</h4>
+        </div>
+        <div class="card-body text-center p-4">
+          <p class="fs-5 mb-4">
+            Se o e-mail informado estiver cadastrado, você receberá uma mensagem com instruções para redefinir sua senha.
+          </p>
+          <div class="d-grid col-8 mx-auto">
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg rounded-pill">
+              Página Inicial
+            </a>
+          </div>
+        </div>
+        <div class="card-footer text-center small text-muted rounded-bottom-4">
+          Pode levar alguns minutos para o e-mail chegar.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

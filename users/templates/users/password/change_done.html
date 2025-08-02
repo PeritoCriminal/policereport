@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Senha Alterada | Policereport{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm rounded-4 border-0">
+        <div class="card-header bg-success text-white text-center rounded-top-4">
+          <h4 class="mb-0">Senha Alterada</h4>
+        </div>
+        <div class="card-body text-center p-4">
+          <p class="fs-5 mb-4">
+            Sua senha foi atualizada com sucesso.
+          </p>
+          <div class="d-grid gap-2 col-8 mx-auto">
+            <a href="{% url 'profile' %}" class="btn btn-primary btn-lg rounded-pill">
+              Voltar ao Perfil
+            </a>
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg rounded-pill">
+              Página Inicial
+            </a>
+          </div>
+        </div>
+        <div class="card-footer text-center small text-muted rounded-bottom-4">
+          Segurança em primeiro lugar.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -2,17 +2,17 @@
 {% load static %}
 {% load widget_tweaks %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Entrar no Sistema | Policereport{% endblock %}
 
 {% block content %}
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <div class="card shadow-sm rounded-3">
-        <div class="card-header bg-primary text-white">
+      <div class="card shadow-sm rounded-4 border-0">
+        <div class="card-header bg-primary text-white rounded-top-4 text-center">
           <h4 class="mb-0">Acesso ao Sistema</h4>
         </div>
-        <div class="card-body">
+        <div class="card-body p-4">
           {% if form.errors %}
             <div class="alert alert-danger" role="alert">
               Nome de usuário ou senha inválidos.
@@ -22,19 +22,25 @@
             {% csrf_token %}
             <div class="mb-3">
               <label for="id_username" class="form-label">Usuário</label>
-              {{ form.username|add_class:"form-control" }}
+              {{ form.username|add_class:"form-control form-control-lg" }}
             </div>
             <div class="mb-3">
               <label for="id_password" class="form-label">Senha</label>
-              {{ form.password|add_class:"form-control" }}
+              {{ form.password|add_class:"form-control form-control-lg" }}
             </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary">Entrar</button>
+            <div class="d-grid gap-2 mt-4">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+                Entrar
+              </button>
+              <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg rounded-pill">
+                Cancelar
+              </a>
             </div>
           </form>
         </div>
-        <div class="card-footer text-center small text-muted">
-          Esqueceu sua senha? <a href="{% url 'password_reset' %}">Recuperar acesso</a>
+        <div class="card-footer text-center small text-muted rounded-bottom-4">
+          Esqueceu sua senha?
+          <a href="{% url 'password_reset' %}" class="text-decoration-none">Recuperar acesso</a>
         </div>
       </div>
     </div>

@@ -7,4 +7,7 @@ from .auth import (
     CustomPasswordResetDoneView,
     CustomPasswordResetConfirmView,
     CustomPasswordResetCompleteView,
+    RegisterView,
+    ProfileView,
+    EditProfileView,
 )

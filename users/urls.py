@@ -1,5 +1,3 @@
-# users/urls.py
-
 from django.urls import path
 from users.views import (
     CustomLoginView,
@@ -10,11 +8,20 @@ from users.views import (
     CustomPasswordResetDoneView,
     CustomPasswordResetConfirmView,
     CustomPasswordResetCompleteView,
+    RegisterView,              # <- ADICIONE ESTA
+    ProfileView,               # <- E ESTA
+    EditProfileView,           # <- E ESTA
 )
 
 urlpatterns = [
+    # Autenticação
     path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', CustomLogoutView.as_view(), name='logout'),
+    path('register/', RegisterView.as_view(), name='register'),  # <- REGISTRO
+
+    # Perfil
+    path('profile/', ProfileView.as_view(), name='profile'),                # <- PERFIL
+    path('profile/edit/', EditProfileView.as_view(), name='edit_profile'),  # <- EDIÇÃO
 
     # Troca de senha (usuário autenticado)
     path('password/change/', CustomPasswordChangeView.as_view(), name='password_change'),
