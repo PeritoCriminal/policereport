@@ -1,0 +1,32 @@
+users/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── forms
+│   └── __init__.py
+├── migrations
+│   ├── 0001_initial.py
+│   └── __init__.py
+├── models
+│   ├── __init__.py
+│   └── user.py
+├── templates
+│   └── users
+│       ├── edit_profile.html
+│       ├── login.html
+│       ├── logout.html
+│       ├── password
+│       │   ├── change_done.html
+│       │   ├── change_form.html
+│       │   ├── reset_complete.html
+│       │   ├── reset_confirm.html
+│       │   ├── reset_done.html
+│       │   └── reset_form.html
+│       ├── profile.html
+│       └── register.html
+├── tests.py
+├── tree.txt
+├── urls.py
+└── views
+    ├── __init__.py
+    └── auth.py
